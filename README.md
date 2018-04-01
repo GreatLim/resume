@@ -1,6 +1,6 @@
 # My Latex resume
 - Chinese version: [clike here to download](https://github.com/GreatLim/resume/raw/master/resume_chinese.pdf)
-- Inspired from [cies-breijs-resume](https://github.com/cies/resume)
+- Inspired by [cies-breijs-resume](https://github.com/cies/resume)
 
 ## Features
 
