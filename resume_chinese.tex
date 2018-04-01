@@ -1,0 +1,236 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\hyphenation{Some-long-word}
+
+% Support Chinese
+\usepackage{xeCJK}
+
+% Change the indentation of a list
+\usepackage{enumitem}
+
+
+\usepackage{titlesec}
+
+
+
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+\titlespacing*{\subsection}
+{0pt}{0.5em}{0.4em}
+
+
+\begin{document}  % begin the content of the document
+
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{林明真}{December 3, 1995}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:nju.lim@outlook.com}{nju.lim\mbox{}@\mbox{}outlook.com}\sbull
+\textsmaller{+}86.15651953065\sbull
+\href{https://github.com/greatlim}{github.com/greatlim}\sbull
+\href{https://www.linkedin.com/in/mingzhenlim/}{linkedin.com/in/mingzhenlim}
+
+
+
+
+
+\roottitle{教育经历}
+\spacedhrule{-0.1em}{0.2em}
+
+\headedsection
+  {{\href{http://www.nju.edu.cn/}{\textbf{南京大学}}}/{\acr{\href{https://eng.nju.edu.cn/}{\textbf{现代工程与应用科学学院}}}}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {材料物理}
+    {Sep,2014 -- present}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item GPA:\ 4.4/5\ \ rank:\ 3/35
+        \item 主要课程:\ 微积分、概率论、线性代数、数学物理方法、离散数学、C语言与数据结构、数值分析(Matlab)、大数据经济学(Python)、UCB-CS61B(Java)、计算机系统与软件、计算机系统基础(cousera)
+        \item 荣誉\&证书:\ 人民奖学金、南京大学优秀学生、创行中国活跃学生、计算机二级、英语六级
+    \end{itemize}}}
+}
+
+
+
+
+
+
+\roottitle{项目经历}
+\spacedhrule{-0.1em}{0.2em}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{利用Xeon Phi处理器进行非线性光学过程数值模拟}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {第一作者}
+    {Jan,2017 -- present}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item 通过优化算法和对Xeno Phi多线程性能的充分利用，对非线性光学过程中复杂的微分方程进行求解，更快更精准的获得光学过程的数值模拟
+        \item SSH远程连接到实验室服务器主机，在Linux上使用Vim和GCC编写C语言程序
+    \end{itemize}
+    }
+    }
+}
+
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{基于全方位评价的多策略基金投顾系统}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {项目负责人}
+    {June,2017 -- Oct,2017}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item 开发了FOF投资顾问系统为顾客提供一套成熟透明的投资策略，使用React + Redux框架开发 Web 前端；使用Java写安卓移动端；使用 Swift 写 iOS 移动端；前后端使用 JSON 作为数据传输格式。开发过程中使用 UML 进行系统的设计，使用Git管理代码及代码的依赖关系，搭建GitHub项目用于小组间的信息共享；使用StarUML进行系统建模和体系结构设计；使用Sketch绘制系统原型界面
+        \item 使用机器学习的方法，基于基金的历史数据，对基金的未来表现进行预测；以China Stock Market \& Accounting Research为数据来源，通过上一季度的13个指标作为输入变量来训练随机森林模型进而预测下一季度基金的表现，最终正确率高达97\%
+        \item 在2017届花旗杯中获得一等奖（1/199）和最佳技术实现奖，总计11000\$的奖金
+    \end{itemize}
+    }
+    }
+}
+
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{黄金期货套利交易系统}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {项目负责人}
+    {June,2016 -- Sep,2016}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item 开发为个人、企业及机构等投资者在黄金期货交易领域提供策略分析、实时交易、信息共享、风险预判等功能的信息服务类平台型软件
+        \item 采用Java、Matlab、SQL 语言作为后台服务器的开发语言，后台服务器使用MySQL 数据库存储信息；使用JavaFX 开发PC 客户端；通信模块通过http请求进行通信，信息使用JSON 定义进行封装
+        \item 使用Matlab建立不同模型分别针对不同黄金期货之间的价差走势进行分析，利用交易信号、网格交易法（GTM）、协整关系的统计套利的方法实现自动交易的功能
+    \end{itemize}
+    }
+    }
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{美国大学生数学建模竞赛}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {团队成员}
+    {Jan,2016 -- Feb,2016}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item 使用Matlab建立一个以时间为考量的模型，利用太空碎片数据和其重量的分布，最终确定最佳解决方法
+        \item 在2016年美国大学生数学建模竞赛中获得S奖
+    \end{itemize}
+    }
+    }
+}
+
+
+
+
+
+\roottitle{志愿活动}
+\spacedhrule{-0.1em}{0.2em}
+
+
+\headedsection
+  {\textbf{南大Enactus“梗上一层”公益项目组}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {创始人}
+    {Oct,2014 -- Jun,2016}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item 建立项目组，与南京及周边地区茶农联系，回收茶梗，减少污染。同时，与玄武区残疾人中心进行长期合作，利用回收茶梗生产相关工艺品并在相关商店销售，实现了茶农与残障人士的增收
+        \item 项目组利用校内举办color run的机会，联系校内保洁阿姨制作茶梗相关工艺品，实现保洁阿姨的增收
+    \end{itemize}
+    }
+    }
+}
+
+\headedsection
+  {\textbf{南京大学社团联合会}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {部员}
+    {Sep,2014 -- Jun,2015}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item 参与建立南京各大高校社团联合会峰会，并在会上对南京地区大学社团交流活动达成共识；代表南京大学社团联合会参与南京各大高校社团巡演晚会
+        \item 为校内各项社团活动拉取赞助，为校内社团活动的顺利开展提供各项便利的服务
+    \end{itemize}
+    }
+    }
+}
+
+
+
+
+
+
+
+\roottitle{技能}
+\spacedhrule{-0.1em}{0.2em}
+
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {专业技能:}
+  {使用git进行团队合作，喜欢使用Java/\nsp C/\nsp Python/\nsp Perl进行编程。利用Bash, Apache, My\acr{SQL}对Linux服务器进行管理。对\acr{HTML+CSS}, \acr{XML}, \acr{React + Redux}, \acr{Spring Boot}和JavaScript(主要是Angular和jQuery)等互联网开发工具有一定了解}
+
+  %Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mostly Angular and jQuery)
+
+\vspace{0.5em}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {语言能力:}
+  {Toefl:\ 101}
+
+\vspace{0.6em}
+
+
+\roottitle{兴趣}
+\spacedhrule{-0.1em}{0.2em}
+
+
+\inlineheadsection
+{}
+{绘画，艺术，摄影，印刷排版 (e.g.\ 图形设计， \LaTeX), \acr{UI}/\acr{UX}设计，健身，羽毛球，烹饪。}
+
+
+\end{document}
+
+＀
