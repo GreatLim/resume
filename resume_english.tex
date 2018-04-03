@@ -1,0 +1,235 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\hyphenation{Some-long-word}
+
+% Support Chinese
+\usepackage{xeCJK}
+
+% Change the indentation of a list
+\usepackage{enumitem}
+
+
+\usepackage{titlesec}
+
+
+
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+\titlespacing*{\subsection}
+{0pt}{0.5em}{0.4em}
+
+
+\begin{document}  % begin the content of the document
+
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Mingzhen Lin}{December 3, 1995}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:nju.lim@outlook.com}{nju.lim\mbox{}@\mbox{}outlook.com}\sbull
+\textsmaller{+}86.15651953065\sbull
+\href{https://github.com/greatlim}{github.com/greatlim}\sbull
+\href{https://www.linkedin.com/in/mingzhenlim/}{linkedin.com/in/mingzhenlim}
+
+
+
+
+
+\roottitle{EDUCATION}
+\spacedhrule{-0.1em}{0.2em}
+
+\headedsection
+  {{\href{http://www.nju.edu.cn/}{\textbf{Nanjing University}}}/{\acr{\href{https://eng.nju.edu.cn/}{\textbf{College of Engineering and Applied Sciences}}}}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {Materials Physics}
+    {Sep,2014 -- present}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item \textbf{GPA:}\ 4.4/5\ \ \textbf{rank:}\ 3/35
+        \item \textbf{Courses}:\ Probability Theory and Mathematical Statistics, Linear Algebra, Discrete Math、C Programming and Data Structure, Numerical Method(Matlab)、Big Data Economics(Python), UCB-CS61B(Java), Computer System and System Software
+        \item \textbf{Scholarships \& Awards:}
+        University-level outstanding students
+        , People’s Scholarship from Nanjing University
+    \end{itemize}}}
+}
+
+
+
+
+
+
+\roottitle{ACADEMIC EXPERIENCE}
+\spacedhrule{-0.1em}{0.2em}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{The Numerical Simulation of Nonlinear Optical Process}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {First Author}
+    {Jan,2018 -- present}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item Optimized algorithms and use Xeon Phi that delivers massive parallelism and vectorization performance to acquire better numerical simulation of nonlinear optical process
+    \end{itemize}
+    }
+    }
+}
+
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{FOF Navigator - Fund Investment Adviser System}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {Team Leader}
+    {June,2017 -- Oct,2017}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item Spearheaded the development of the FOF Investment Adviser System to provide tailored investment strategies for clients. Used React+Redux framework for the frontend, STARUML for system modeling and Git/GitHub for managing the code. Contributed to the Android/iOS mobile App development using Java, Swift and C\#
+        \item Investigated machine-learning methods for forecasting the performance of funds based on historical data, including building the Random Forest model using 13 features, training the model using datasets from China Stock Market \& Accounting Research, and validating that the Random Forest model predicts the next quarter’s performance of funds with up to 97\% accuracy
+        \item Won the 1st place among 199 teams and Best Technology Achievement Award
+    \end{itemize}
+    }
+    }
+}
+
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{The Arbitrage System for Gold Futures}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {Team Leader}
+    {June,2016 -- Sep,2016}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item Led the development of the Gold futures Arbitrage Trading system that integrates trading strategy development, trading execution and visualization
+        \item Used Java, Python, SQL language as the development language of background server. Developed the PC client by JavaFX. Encapsulated information by JSON
+        \item Used Matlab for consrtructing different models based on trading signals,  grid trading method and Granger conintegration relation to predict the price of gold futures
+    \end{itemize}
+    }
+    }
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\textbf{The Mathematical Contest in Modeling}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {Team Member}
+    {Jan,2016 -- Feb,2016}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item Developed a time-dependent model that could determine the best alternative of alternatives that a private firm could adopt as a commercial opportunity to address the space debris problem
+        \item Won Successfully Participation Award
+    \end{itemize}
+    }
+    }
+}
+
+
+
+
+
+\roottitle{EXTRA-CURRICULAR ACTIVITIES}
+\spacedhrule{-0.1em}{0.2em}
+
+
+\headedsection
+  {\textbf{Enactus China}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {Project Founder}
+    {Oct,2014 -- Jun,2016}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item Found public project to commuicate with tea growers for recycling tea waste. Corporate with Nanjing Xuanwu diabled people center to create job opportunity for the disable.
+    \end{itemize}
+    }
+    }
+}
+
+\headedsection
+  {\textbf{Nanjing University Students' Association Union}}
+  {\textsc{Nanjing, China}} {%
+  \headedsubsection
+    {Member}
+    {Sep,2014 -- Jun,2015}
+    {\bodytext{
+    \begin{itemize}[leftmargin=-1.5em]
+      \setlength\itemsep{0.1em}
+        \item Built relationships with potential supporters and donors for fundraising to support different initiatives. Worked with teammates on event organization for greater involvement of other colleges in Nanjing
+    \end{itemize}
+    }
+    }
+}
+
+
+
+
+
+
+
+\roottitle{SKILLS \& HOBBIES}
+\spacedhrule{-0.1em}{0.2em}
+
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Skills:}
+  {Enjoys writing Java/\nsp C/\nsp Python/\nsp Perl. Strong Linux administration skills (e.g.\ Bash, Apache, My/No\acr{SQL}. Solid knowledge of web technologies:\acr{HTML+CSS}, \acr{XML}, \acr{React + Redux}, \acr{Spring Boot} and JavaScript (mostly Angular and jQuery)}
+
+  %Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mostly Angular and jQuery)
+
+\vspace{0.5em}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Hobbies:}
+  {painting, art, Photography，typography (e.g.\ graphic design, \LaTeX) and \acr{UI}/\acr{UX}-design}
+
+\vspace{0.6em}
+
+
+% \roottitle{兴趣}
+% \spacedhrule{-0.1em}{0.2em}
+%
+%
+% \inlineheadsection
+% {}
+% {painting, art, Photography，typography (e.g.\ graphic design, \LaTeX) and \acr{UI}/\acr{UX}-design}
+
+
+\end{document}
+
+＀
