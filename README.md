@@ -1,6 +1,6 @@
 # My Latex resume
 - Chinese version: [clike here to download](https://github.com/GreatLim/resume/raw/master/resume_chinese.pdf)
-- English version:[clike here to download](https://github.com/GreatLim/resume/raw/master/resume_english.pdf)
+- English version: [clike here to download](https://github.com/GreatLim/resume/raw/master/resume_english.pdf)
 - Inspired by [cies-breijs-resume](https://github.com/cies/resume)
 
 ## Features
@@ -10,7 +10,7 @@
 - More flexible to rearrange typeset
 
 ## Todo
-[x] resume_english.tex
+~~resume_english.tex~~
 
 
 ## Terms of sharing
